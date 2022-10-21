@@ -28,18 +28,48 @@ ul {
 
 body {
     background-color: grey;
+    display: flex;
+    height: 100vh;
 }
 
 #container {
     background-color: var(--l-grey);
     padding: 2px 3px 3px 2px;
     margin: auto;
-    width: 800px;
-    height: 600px;
+    width: min-content;
+    height: min-content;
 }
 
-ul#fake-menu li:hover, .title-bar  {
+ul#fake-menu li:hover, 
+.title-bar  {
     cursor: default;
+}
+
+.guizmo,
+#tools input,
+#button-container button {
+    cursor: pointer;
+}
+
+#container, 
+.guizmo, 
+#tools input, 
+aside button, 
+#color-picker-container,
+#palette div {
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+}
+
+button:active,
+.guizmo:active, 
+#tools input:active, 
+#color-picker-container:active,
+#palette div:active {
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+
+#paint-container {
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
 }
 
 /* * * Header * * */
@@ -92,6 +122,7 @@ ul#fake-menu {
     color: var(--black);
     font-size: 1.2rem;
 }
+
 ul#fake-menu li {
     padding: 5px 10px;
 }
@@ -102,6 +133,10 @@ ul#fake-menu li:hover {
 }
 
 /* * * Main * * */
+
+main {
+    display: flex;
+}
 
 aside {
     box-sizing: content-box;
@@ -126,18 +161,18 @@ aside {
     width: 100%;
 }
 
+#button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 aside button {
     border: none;
     background: none;
     font-family: "w95fa", sans-serif;
     padding: 5px;
     width: 100%;
-}
-
-#button-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 #paint-deco {
@@ -147,12 +182,27 @@ aside button {
     margin-top: 10px;
 }
 
+#paint-container {
+    width: 400px;
+    height: 400px;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+    margin: 0 5px 5px 5px
+}
+
 /* * * Footer * * */
 
 #color-picker-container {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     padding: 2px;
+}
+
+footer {
+    display: flex;
+    border-top: solid 1px var(--white);
+    border-bottom: solid 1px var(--d-grey);
+    box-shadow: var(--d-grey) 0 -1px, var(--white) 0 1px;
+    padding: 5px;
 }
 
 footer input {
@@ -171,6 +221,8 @@ footer input::-webkit-color-swatch {
     border: none; 
 }
 
-.border-98, .guizmo, #tools input, aside button, #color-picker-container {
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+#palette {
+    display: grid;
+    grid-template-columns: repeat(14, 20px);
+    grid-template-rows: repeat(2, 20px);
 }
