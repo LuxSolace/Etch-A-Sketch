@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch 98</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+<div id="container">
+
+    <header>
+
+        <div id="title-bar">
+
+            <div id="title-text">
+                <img src="./images/paint-logo.png">
+                <h1>untitled - etch-a-sketch 98</h1>
+            </div>
+
+        <div id="windows-guizmo">
+            <div>
+                <img src="./images/minimize.svg">
+                <img src="./images/maximize.svg">
+         </div>
+            <img src="./images/close.svg">
+        </div>
+
+        </div>
+
+        <ul>
+            <li>File</li>
+            <li>Edit</li>
+            <li>View</li>
+            <li>Image</li>
+            <li>Options</li>
+            <li>Help</li>
+        </ul>
+
+    </header>
+
+    <main>
+
+        <aside>
+
+            <div id="tools">
+                <input type="image" src="./images/pen.png" alt="pen">
+                <input type="image" src="./images/eraser.png" alt="eraser">
+                <input type="image" src="./images/bucket.png" alt="bucket">
+                <input type="image" src="./images/color-picker.png" alt="color picker">
+            </div>
+
+            <button>Random</button>
+            <button>Clear</button>
+            <button>Hover</button>
+            <button>Grid</button>
+
+        </aside>
+
+        <div id="paint-container">
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <input type="color" id="color-picker" value="#000">
+
+        <div id="palette"></div>
+
+    </footer>
+
+</div>
+
+<script src="etch-a-sketh.js"></script>
+
+</body>
+
+</html>
