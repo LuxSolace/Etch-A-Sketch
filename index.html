@@ -10,7 +10,7 @@
 
 <body>
     
-<div id="container">
+<div id="container" class="border-98">
 
     <header>
 
@@ -21,17 +21,29 @@
                 <h1>untitled - etch-a-sketch 98</h1>
             </div>
 
-        <div id="windows-guizmo">
-            <div>
-                <img src="./images/minimize.svg">
-                <img src="./images/maximize.svg">
-         </div>
-            <img src="./images/close.svg">
-        </div>
+            <div id="windows-guizmo">
+
+                <div>
+
+                    <div class="guizmo">
+                        <img src="./images/minimize.svg">
+                    </div>
+
+                    <div class="guizmo">
+                        <img src="./images/maximize.svg">
+                    </div>
+                    
+                </div>
+                    
+                <div class="guizmo">
+                    <img src="./images/close.svg">
+                </div>
+
+            </div>
 
         </div>
 
-        <ul>
+        <ul id="fake-menu">
             <li>File</li>
             <li>Edit</li>
             <li>View</li>
