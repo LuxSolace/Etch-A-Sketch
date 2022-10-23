@@ -66,8 +66,8 @@ button:active,
 #color-picker-container:active,
 #palette div:active, 
 #size-input-container input,
-button.pressed {
-    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+.pressed {
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080 !important;
 }
 
 #paint-container {
@@ -243,4 +243,8 @@ footer input::-webkit-color-swatch {
     display: grid;
     grid-template-columns: repeat(14, 20px);
     grid-template-rows: repeat(2, 20px);
+}
+
+#paint-container.grid {
+    gap: 1px;
 }
