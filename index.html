@@ -59,7 +59,7 @@
         <aside>
 
             <div id="tools">
-                <input type="image" src="./images/pen.png" alt="pen">
+                <input type="image" src="./images/pen.png" alt="pen" id="penBtn" class="pressed">
                 <input type="image" src="./images/eraser.png" alt="eraser">
                 <input type="image" src="./images/bucket.png" alt="bucket">
                 <input type="image" src="./images/color-picker.png" alt="color picker">
@@ -67,9 +67,9 @@
 
             <div id="button-container">
             <button>Random</button>
-            <button>Clear</button>
             <button>Hover</button>
-            <button>Grid</button>
+            <button onclick="toggleGrid()">Grid</button>
+            <button onclick="clearCanvas()">Clear</button>
             </div>
 
             <div id="size-input-container">
